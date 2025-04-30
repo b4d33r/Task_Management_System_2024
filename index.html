@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Task Management System - Home</title>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+        <link rel="stylesheet" href="css/foater_header.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <style>
+            .hidden-text {
+                display: none;
+                padding: 2.5rem;
+                background: linear-gradient(135deg, rgba(44, 62, 80, 0.95), rgba(52, 73, 94, 0.95));
+                color: #fff;
+                border-radius: 15px;
+                margin: 2rem auto;
+                max-width: 900px;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+                transform: translateY(20px);
+                opacity: 0;
+                transition: all 0.5s ease;
+            }
+    
+            .hidden-text.visible {
+                transform: translateY(0);
+                opacity: 1;
+            }
+    
+            .feature-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 2rem;
+                margin-top: 2rem;
+            }
+    
+            .feature-item {
+                background: rgba(255, 255, 255, 0.1);
+                padding: 1.5rem;
+                border-radius: 10px;
+                text-align: center;
+                transition: transform 0.3s ease;
+            }
+    
+            .feature-item:hover {
+                transform: translateY(-5px);
+                background: rgba(255, 255, 255, 0.15);
+            }
+    
+            .feature-icon {
+                font-size: 2.5rem;
+                margin-bottom: 1rem;
+                color: #ffd700;
+            }
+    
+            .cta-buttons {
+                display: flex;
+                gap: 1rem;
+                justify-content: center;
+                margin-top: 2rem;
+            }
+    
+            .cta-button {
+                padding: 0.8rem 1.5rem;
+                border: none;
+                border-radius: 5px;
+                font-weight: 600;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                text-decoration: none;
+            }
+    
+            .primary-cta {
+                background: #ffd700;
+                color: #2c3e50;
+            }
+    
+            .secondary-cta {
+                background: transparent;
+                border: 2px solid #fff;
+                color: #fff;
+            }
+    
+            .cta-button:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            }
+    
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                line-height: 1.6;
+                margin: 0;
+                padding: 0;
+            }
+    
+            .banner_section {
+                background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+                color: var(--text-light);
+                padding: 6rem 0;
+                text-align: center;
+            }
+    
+            .banner_taital {
+                font-size: 3.5rem;
+                font-weight: 700;
+                margin-bottom: 1.5rem;
+                animation: fadeInUp 1s ease;
+            }
+    
+            .free_text {
+                font-size: 1.5rem;
+                opacity: 0.9;
+                margin-bottom: 2rem;
+            }
+    
+            .read_bt {
+                background-color: var(--accent-color);
+                padding: 1rem 2rem;
+                border-radius: 5px;
+                display: inline-block;
+                transition: all 0.3s ease;
+            }
+    
+            .read_bt a {
+                color: var(--text-light);
+                text-decoration: none;
+            }
+    
+            .read_bt:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            }
+    
+            .hidden-text {
+                display: none;
+                padding: 2rem;
+                background-color: rgba(44, 62, 80, 0.9);
+                color: var(--text-light);
+                border-radius: 10px;
+                margin-top: 2rem;
+                animation: fadeIn 0.5s ease;
+            }
+    
+            .service_section {
+                padding: 5rem 0;
+                background-color: #f8f9fa;
+            }
+    
+            .about_text {
+                font-size: 2.5rem;
+                color: var(--text-dark);
+                text-align: center;
+                margin-bottom: 2rem;
+            }
+    
+            .ipsum_text {
+                text-align: center;
+                color: #666;
+                margin-bottom: 3rem;
+            }
+    
+            .service_section_2 .col-lg-4 {
+                padding: 2rem;
+                text-align: center;
+                transition: transform 0.3s ease;
+            }
+    
+            .service_section_2 .col-lg-4:hover {
+                transform: translateY(-10px);
+            }
+    
+            .icon_1 {
+                margin-bottom: 1.5rem;
+            }
+    
+            .website_text {
+                color: var(--text-dark);
+                font-size: 1.5rem;
+                margin: 1rem 0;
+            }
+    
+            .client_section {
+                background-color: var(--primary-color);
+                color: var(--text-light);
+                padding: 4rem 0;
+                text-align: center;
+            }
+    
+            .client_text {
+                font-size: 2rem;
+                margin-bottom: 2rem;
+            }
+    
+            .ipsum_text_2 {
+                font-size: 1.1rem;
+                opacity: 0.9;
+                max-width: 800px;
+                margin: 0 auto;
+            }
+    
+            @keyframes fadeInUp {
+                from { opacity: 0; transform: translateY(20px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+    
+            @keyframes fadeIn {
+                from { opacity: 0; }
+                to { opacity: 1; }
+            }
+    
+            .logo-text {
+                font-family: 'Playfair Display', serif;
+                font-size: 28px;
+                font-weight: 700;
+                color: #ffffff;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+                position: relative;
+                display: inline-block;
+            }
+    
+            .logo-text::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: -5px;
+                width: 100%;
+                height: 2px;
+                background-color: #ffffff;
+                transform: scaleX(0);
+                transition: transform 0.3s ease;
+            }
+    
+            .logo-text:hover::after {
+                transform: scaleX(1);
+            }
+    
+            .logo-text:hover {
+                color: #ffd700;
+            }
+        </style>
+    </head>    
+    <body>
+        <div class="header_section">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-dark">
+                    <a class="navbar-brand logo-text" href="index.html">
+                        <i class="fas fa-tasks"></i> Task Management System
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="login.php">
+                    <i class="fas fa-sign-in-alt"></i> Connexion
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="register.php">
+                    <i class="fas fa-user-plus"></i> Inscription
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contact.php">
+                    <i class="fas fa-envelope"></i> Contact
+                </a>
+        </ul>
+    </div>
+                </nav>
+            </div>
+        </div>
+    
+        <div class="banner_section">
+            <div class="container">
+                <h1 class="banner_taital">Système de Gestion des Tâches</h1>
+                <h2 class="free_text">Optimisez la gestion de vos projets et suivez vos progrès facilement</h2>
+                <div class="read_bt">
+                    <a href="#">Découvrez Plus</a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="service_section">
+            <div class="container">
+                <h1 class="about_text">Fonctionnalités Clés</h1>
+                <p class="ipsum_text">Gérez vos tâches, respectez les délais et suivez les progrès de votre équipe grâce à ces fonctionnalités.</p>
+                <div class="service_section_2">
+                    <div class="row">
+                        <div class="col-sm-12 col-lg-4">
+                            <div class="icon_1"><img src="images/icon-1.png" alt="Task Attribution"></div>
+                            <h1 class="website_text">Attribution de Tâches</h1>
+                            <p class="dolor_text">Assignez facilement des tâches aux membres de l'équipe et fixez des délais.</p>
+                        </div>
+                        <div class="col-sm-12 col-lg-4">
+                            <div class="icon_1"><img src="images/icon-2.png" alt="Progress Tracking"></div>
+                            <h1 class="website_text">Suivi des Progrès</h1>
+                            <p class="dolor_text">Surveillez l'avancement des tâches et leur statut de réalisation.</p>
+                        </div>
+                        <div class="col-sm-12 col-lg-4">
+                            <div class="icon_1"><img src="images/icon-3.png" alt="Reporting"></div>
+                            <h1 class="website_text">Rapport</h1>
+                            <p class="dolor_text">Générez des rapports pour suivre la performance de l'équipe et l'achèvement des tâches.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="client_section">
+            <div class="container">
+                <h1 class="about_text">Témoignages des Clients</h1>
+                <p class="ipsum_text">Notre système de gestion des tâches a aidé de nombreux clients à améliorer leur flux de travail et leur productivité.</p>
+                <div class="client_section_2">
+                    <h1 class="client_text">Retours de Nos Clients</h1>
+                    <p class="ipsum_text_2">Notre système a considérablement amélioré les taux d'achèvement des tâches et l'efficacité de l'équipe.</p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="footer_section">
+            <p>&copy; 2024 Gestion des Tâches | <a href="#">Politique de confidentialité</a> | <a href="#">Termes et conditions</a></p>
+        </div>
+    
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script>
+            document.querySelector('.read_bt a').addEventListener('click', function(e) {
+                e.preventDefault();
+                const existingText = document.querySelector('.hidden-text');
+                
+                if (existingText) {
+                    existingText.remove();
+                } else {
+                    const hiddenText = document.createElement('div');
+                    hiddenText.className = 'hidden-text';
+                    hiddenText.innerHTML = `
+                        <h3 style="font-size: 2rem; margin-bottom: 1.5rem; color: #ffd700; text-align: center;">
+                            Transformez votre gestion de projet
+                        </h3>
+                        <p style="font-size: 1.2rem; text-align: center; margin-bottom: 2rem;">
+                            Découvrez une nouvelle façon de gérer vos projets avec notre système intelligent et intuitif.
+                        </p>
+                        <div class="feature-grid">
+                            <div class="feature-item">
+                                <div class="feature-icon">📊</div>
+                                <h4>Tableaux de bord personnalisés</h4>
+                                <p>Visualisez vos progrès et métriques clés en un coup d'œil</p>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">🤝</div>
+                                <h4>Collaboration en temps réel</h4>
+                                <p>Travaillez ensemble efficacement, où que vous soyez</p>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">🎯</div>
+                                <h4>Suivi des objectifs</h4>
+                                <p>Définissez et atteignez vos objectifs plus rapidement</p>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">📱</div>
+                                <h4>Application mobile</h4>
+                                <p>Gérez vos tâches en déplacement</p>
+                            </div>
+                        </div>
+                        <div class="cta-buttons">
+                            <a href="register.php" class="cta-button primary-cta">Commencer gratuitement</a>
+                            <a href="contact.php" class="cta-button secondary-cta">Nous contacter</a>
+                        </div>
+                    `;
+                    
+                    this.parentElement.insertAdjacentElement('afterend', hiddenText);
+                    
+                    setTimeout(() => {
+                        hiddenText.style.display = 'block';
+                        setTimeout(() => {
+                            hiddenText.classList.add('visible');
+                        }, 50);
+                    }, 0);
+                }
+            });
+        </script>
+    </body>
+    </html>    
