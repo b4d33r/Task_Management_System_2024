@@ -1,0 +1,15 @@
+# PHP specific
+*.log
+.env
+vendor/
+composer.lock
+
+# System specific
+.DS_Store
+Thumbs.db
+
+# IDE specific
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
