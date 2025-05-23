@@ -55,18 +55,22 @@ cd Task_Management_System_2024
 ```
 Task_Management_System_2024/
 ├── css/              # Stylesheet files
-├── js/              # JavaScript files
+├── database/         # Database schema files
 ├── images/          # Image assets
-├── website.sql      # Complete database schema
-├── db.php          # Database configuration
-├── index.html      # Landing page
-├── login.php       # Authentication
-├── register.php    # User registration
-├── dashboard.php   # Task management
-├── premium.php     # Premium features
-├── profil.php      # User profile
-├── contact.php     # Contact form
-└── notif.php       # Notifications
+├── js/              # JavaScript files
+├── .gitignore       # Git ignore rules
+├── LICENSE          # MIT License
+├── README.md        # Project documentation
+├── contact.php      # Contact form
+├── dashboard.php    # Main dashboard
+├── db.php           # Database configuration
+├── index.html       # Landing page
+├── login.php        # User authentication
+├── notif.php        # Notifications
+├── premium.php      # Premium features
+├── profil.php       # User profile
+├── register.php     # User registration
+└── website.sql      # Database dump
 ```
 
 ## Security Features
