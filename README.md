@@ -38,7 +38,6 @@ cd Task_Management_System_2024
 2. Set up the database:
    - Create a MySQL database
    - Import the database schema from `website.sql`
-   - Copy `db.example.php` to `db.php`
    - Update database credentials in `db.php`
 
 3. Configure your web server:
